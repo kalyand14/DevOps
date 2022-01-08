@@ -1,0 +1,64 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  JenkinsInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-052cef05d01020f1d
+      InstanceType: t2.micro
+      UserData: 
+        Fn::Base64: 
+          !Sub |
+            #!/bin/bash 
+            yum update -y
+            yum install -y httpd.x86_64
+            
+
+            sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+            sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+            amazon-linux-extras install epel 
+            amazon-linux-extras install java-openjdk11  
+            yum install -y jenkins
+
+            systemctl start httpd.service
+            systemctl enable httpd.service
+            echo Hello World from $(hostname -f) > /var/www/html/index.html
+
+            systemctl start jenkins
+
+            chkconfig jenkins on
+      Tags:
+        - Key: Name
+          Value: JenkinsServer
+      KeyName: "EC2 Tutorial"
+      SecurityGroups:
+        - !Ref WebSecurityGroup
+
+  WebSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: "My Web Security Group"
+      GroupName: My Web SG
+
+      SecurityGroupIngress:
+        - IpProtocol: "tcp"
+          CidrIp: "0.0.0.0/0"
+          FromPort: 80
+          ToPort: 80
+
+        - IpProtocol: "tcp"
+          CidrIp: "0.0.0.0/0"
+          FromPort: 8080
+          ToPort: 8080
+
+        - IpProtocol: "tcp"
+          CidrIp: "0.0.0.0/0"
+          FromPort: 443
+          ToPort: 443
+
+        - IpProtocol: "tcp"
+          CidrIp: "0.0.0.0/0"
+          FromPort: 22
+          ToPort: 22
+
+  
