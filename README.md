@@ -1,5 +1,4 @@
-# DevOps
-Playground for DevOps Task
+# DevOps - Playground for DevOps Task
 
 ## Deploy Jenkins and configure it
 
