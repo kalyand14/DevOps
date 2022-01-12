@@ -7,12 +7,32 @@
 - [X] Deploy jenkins in EC2 using CloudFromation
 - [ ] Deploy jenkins in EC2 using Terraform 
 
+### Create Jenkins Piepline
+
+#### Simple Pipeline: Validation -> Checkout -> Build -> Deploy
+
+#### Full blown Pipeline: Validation -> Checkout -> Build --> Unit Test --> Code Quality -> Upload Artifact -> Deploy to Dev -> Slack Notification --> Approval for QA Deploy --> Deploy to QA --> Approval for Prod Deploy --> Deploy to Prod
+
+#### Deploy WEB application
+
+- [ ] Build and Deploy Java Application (Maven and Gradle)
+- [ ] Build and Deploy Angular Application 
+- [ ] Build and Deploy Python Application
+
+#### Deploy Microservice application
+
+- [ ] Build and Deploy SPringBoot Microservice Application into Kubernetes Cluster
+- [ ] Build and Deploy NodeJS Microservice Application into Kubernetes Cluster
+
+#### Deploy Mobile application
+
+- [ ] Build Android application and deploy artificat into Nexus
+- [ ] Build iOS application and deploy artificat into Nexus
+
 ### Configure Jenkins
 
-- [ ] Update the required plugin
+- [ ] Update the required plugin (Maven, Gradle)
 - [ ] Configure with master and slave nodes
-
-
 
 
 ## AWS
