@@ -5,7 +5,7 @@
 ### Deploy Jenkins
 
 - [X] Deploy jenkins in EC2 using CloudFromation
-- [ ] Deploy jenkins in EC2 using Terraform 
+- [X] Deploy jenkins in EC2 using Terraform 
 
 ### Create Jenkins Piepline
 
