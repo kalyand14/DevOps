@@ -8,6 +8,20 @@ resource "aws_security_group" "security_jenkins_grp" {
   description = "security group for jenkins"
 
   ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
@@ -39,6 +53,7 @@ resource "aws_instance" "JenkinsServer" {
   key_name = var.key_name
   instance_type = var.instance_type
   security_groups= [var.security_group]
+  user_data = file("install_jenkins.sh")
   tags= {
     Name = var.tag_name
   }
