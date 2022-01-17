@@ -9,6 +9,8 @@
 
 ### Create Jenkins Piepline
 
+Sample Git Repo - https://github.com/jenkins-docs
+
 #### Simple Pipeline: Validation -> Checkout -> Build -> Deploy
 
 #### Full blown Pipeline: Validation -> Checkout -> Build --> Unit Test --> Code Quality -> Upload Artifact -> Deploy to Dev -> Slack Notification --> Approval for QA Deploy --> Deploy to QA --> Approval for Prod Deploy --> Deploy to Prod
