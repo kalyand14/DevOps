@@ -46,3 +46,10 @@ Step2: sudo installer -pkg AWSCLIV2.pkg -target /
 Step3: which aws
 
 Step4: aws configure
+
+
+----------------------------------
+
+### Cost Optimize your Jenkins CI/CD pipelines using EC2 Spot Instances
+
+https://aws.amazon.com/blogs/compute/cost-optimize-your-jenkins-ci-cd-pipelines-using-ec2-spot-instances/
