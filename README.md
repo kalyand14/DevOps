@@ -58,4 +58,8 @@ https://aws.amazon.com/blogs/compute/cost-optimize-your-jenkins-ci-cd-pipelines-
 
 ### Blogs
 
+DevOps Coach
+
 https://www.coachdevops.com/2019/03/top-10-challenges-in-implementing-or.html
+
+https://www.youtube.com/watch?v=f0Rbk1iVhnc&t=139s
