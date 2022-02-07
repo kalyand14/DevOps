@@ -55,3 +55,7 @@ Step4: aws configure
 ### Cost Optimize your Jenkins CI/CD pipelines using EC2 Spot Instances
 
 https://aws.amazon.com/blogs/compute/cost-optimize-your-jenkins-ci-cd-pipelines-using-ec2-spot-instances/
+
+### Blogs
+
+https://www.coachdevops.com/2019/03/top-10-challenges-in-implementing-or.html
