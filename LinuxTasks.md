@@ -1,5 +1,11 @@
 # Linux daily task
 
+## 2022/04/10 -  Find and replace all the occurence of a string in a file
+
+```sed -i 's/old-text/new-text/g' input.txt```
+
+#### Reference - https://www.cyberciti.biz/faq/how-to-use-sed-to-find-and-replace-text-in-files-in-linux-unix-shell/
+
 ## 2022/04/11 -  MairaDB Troubleshooting
 
 ```Job for mariadb.service failed because the control process exited with error code```
