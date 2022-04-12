@@ -1,5 +1,7 @@
 # Linux daily task
 
+## 2022/04/08 - Create a Linux User with non-interactive shell
+
 ## 2022/04/09 -  setup NTP server
 
 1. Installing NTP
