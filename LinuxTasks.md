@@ -1,5 +1,34 @@
 # Linux daily task
 
+## 2022/04/09 -  setup NTP server
+
+1. Installing NTP
+   ```sudo yum update
+   sudo yum install ntp
+   sudo systemctl start ntpd
+   sudo systemctl enable ntpd
+   
+   if firewall is configured then allow UDP traffic for NTP service to communicate to NTP pool
+   
+   sudo firewall-cmd --permanent --add-service=ntp
+   sudo firewall-cmd --reload
+
+3. Configuring NTP to Join the Pool \
+    ```vi /etc/ntp.conf```
+   
+   Update the service list in the above file
+   
+    ```server ntp_server_hostname_1 iburst
+    server ntp_server_hostname_2 iburst
+    server ntp_server_hostname_3 iburst
+    server ntp_server_hostname_4 iburst
+    server ntp_server_hostname_5 iburst
+
+5. Restart the NTP service \
+   ```sudo systemctl restart ntpd```
+
+#### Reference - https://www.digitalocean.com/community/tutorials/how-to-configure-ntp-for-use-in-the-ntp-pool-project-on-centos-7
+
 ## 2022/04/10 -  Find and replace all the occurence of a string in a file
 
 ```sed -i 's/old-text/new-text/g' input.txt```
