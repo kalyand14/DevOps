@@ -69,4 +69,16 @@
 #### Reference - https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/
 
 
+## 2022/04/15 - You are not able to restart / start postfix and getting the below error 
+
+```fatal: parameter inet_interfaces: no local interface found for ::1```
+
+  1. Edit hosts file to disable the IPv6 on the server \
+    ```Vi /etc/hosts```
+  2. Comment the line start with \
+    ```::1 ```
+ 
+    
+#### Reference - https://nixhive.com/fatal-parameter-inet_interfaces-no-local-interface-found-for-1/
+
 Md file reference: https://medium.com/@saumya.ranjan/how-to-write-a-readme-md-file-markdown-file-20cb7cbcd6f
