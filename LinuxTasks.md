@@ -77,8 +77,17 @@
     ```Vi /etc/hosts```
   2. Comment the line start with \
     ```::1 ```
- 
+
+
+## 2022/04/17 - Create a user without home directory 
+
+
+  1. To create users without their home directories, ‘-M‘ is used \
+    ```useradd -M shilpi```
+  2. Lets verify that the user is created without a home directoryh \
+    ```ls -l /home/shilpi``` \
+    ```ls: cannot access /home/shilpi: No such file or directory```
     
-#### Reference - https://nixhive.com/fatal-parameter-inet_interfaces-no-local-interface-found-for-1/
+#### Reference - https://www.tecmint.com/add-users-in-linux/#:~:text=To%20add%2Fcreate%20a%20new,already%20exists%20on%20the%20system).
 
 Md file reference: https://medium.com/@saumya.ranjan/how-to-write-a-readme-md-file-markdown-file-20cb7cbcd6f
