@@ -81,13 +81,30 @@
 
 ## 2022/04/17 - Create a user without home directory 
 
-
-  1. To create users without their home directories, ‘-M‘ is used \
+ 1. To create users without their home directories, ‘-M‘ is used \
     ```useradd -M shilpi```
   2. Lets verify that the user is created without a home directoryh \
     ```ls -l /home/shilpi``` \
     ```ls: cannot access /home/shilpi: No such file or directory```
+ 
     
 #### Reference - https://www.tecmint.com/add-users-in-linux/#:~:text=To%20add%2Fcreate%20a%20new,already%20exists%20on%20the%20system).
+
+## 2022/04/19 - Update linux banner 
+
+ /etc/motd - is the system file to show the banner
+
+ 1. Secure copy the banner into each server \
+    ```sudo scp -r nautilus_banner tony@172.16.238.10:/home/tony```
+     ```sudo scp -r nautilus_banner peter@172.16.238.10:/home/peter```
+      ```sudo scp -r nautilus_banner steve@172.16.238.10:/home/steve```
+      
+Note: - SCP running on the device(jump server) is an SSH client application and the SCP server is a SSH server application. if could not able to do ssh then SCP server may not be installed on the target server.
+
+ 
+  2. Deploy the banner into system file \
+    ```sudo mv nautilus_banner /etc/motd``` \
+    
+#### Reference - https://www.shawonruet.com/2020/07/linux-banner-set-up-kodekloud.html
 
 Md file reference: https://medium.com/@saumya.ranjan/how-to-write-a-readme-md-file-markdown-file-20cb7cbcd6f
