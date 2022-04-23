@@ -179,6 +179,28 @@ Give write permission to group
 #### Reference - https://www.youtube.com/watch?v=KZSJH3_ubo4&t=912s
 
 
+## 2022/04/23 - Disable root login
+
+Below should not able allowed
+
+```ssh root@192.168.0.102```
+
+To disable root login, open the main ssh configuration file /etc/ssh/sshd_config with your choice of editor.
+
+```sudo vi /etc/ssh/sshd_config```
+
+Search for the following line in the file.
+
+```#PermitRootLogin no```
+
+Remove the ‘#‘ from the beginning of the line.  Make the line look similar to this.
+
+```PermitRootLogin yes```
+
+Restart the SSH daemon service.
+
+```systemctl restart sshd```
+
 KodeKloud - https://www.shawonruet.com/search/label/operating_system?max-results=20
 
 Md file reference: https://medium.com/@saumya.ranjan/how-to-write-a-readme-md-file-markdown-file-20cb7cbcd6f
