@@ -107,6 +107,78 @@ Note: - SCP running on the device(jump server) is an SSH client application and 
     
 #### Reference - https://www.shawonruet.com/2020/07/linux-banner-set-up-kodekloud.html
 
+## 2022/04/23 - Create Users, Groups, Update directory permissions
+
+### Create user
+
+```useradd -c "wade Wilson" wwilson```
+ 
+check user is created
+
+ ```cat /etc/passwd```
+ ```tail -n5 /etc/passwd```
+
+### Create password
+
+ ```tail -n5 /etc/shadow```
+ ```passwd wwilson```
+
+### Create group
+
+ ```cat /etc/group```
+ 
+ ```tail -n5 /etc/group```
+ 
+ ```groupadd heros```
+ 
+ ```groupadd villains```
+ 
+ ### Add users to the group
+ 
+ ```usermod -a -G heros wwilson```
+
+```usermod -a -G villains vvdom```
+
+```usermod -a -G villains vvdom```
+
+### Create directory
+
+Best place to create sharable folder is under /usr
+
+```mkdir /usr/heros```
+
+```mkdir /usr/villains```
+
+### Change group of directory
+
+```chgrp heros /usr/heros```
+
+```chgrp villains /usr/villians```
+
+### Update directory's group persmission
+
+Give write permission to group
+
+```chmod g+w /usr/heros```
+
+```chmod g+w /usr/villains```
+
+### Update directory's group permission to sticky
+
+```chmod g+s /usr/heros```
+
+```chmod g+s /usr/villains```
+
+### Make directory world not readable
+
+```chmod o-r /usr/heros```
+
+```chmod o-r /usr/villains```
+
+#### Reference - https://www.youtube.com/watch?v=Vjdyk8J4RLU
+#### Reference - https://www.youtube.com/watch?v=KZSJH3_ubo4&t=912s
+
+
 KodeKloud - https://www.shawonruet.com/search/label/operating_system?max-results=20
 
 Md file reference: https://medium.com/@saumya.ranjan/how-to-write-a-readme-md-file-markdown-file-20cb7cbcd6f
