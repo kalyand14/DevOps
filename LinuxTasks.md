@@ -179,7 +179,7 @@ Give write permission to group
 #### Reference - https://www.youtube.com/watch?v=KZSJH3_ubo4&t=912s
 
 
-## 2022/04/23 - Disable root login
+## 2022/04/25 - Disable root login
 
 Below should not able allowed
 
@@ -202,6 +202,42 @@ Restart the SSH daemon service.
 ```systemctl restart sshd```
 
 #### Reference - https://www.tecmint.com/disable-or-enable-ssh-root-login-and-limit-ssh-access-in-linux/
+
+## 2022/05/06 - Create cron job
+
+a. Install cronie package on all Nautilus app servers and start crond service.
+
+b. Add a cron */5 * * * * echo hello > /tmp/cron_text for root user.
+
+Do the below steps in all the app servers
+
+Install cron service
+
+```yum install cronie -y```
+
+Start cron service
+
+```systemctl start crond```
+
+Update cron service to add the job for root user (root in the syntax is the key)
+
+```crontab -e```
+
+```cron */5 * * * * root echo hello > /tmp/cron_text```
+
+Restart cron service
+
+```systemctl restart crond```
+
+List the cron service
+
+```crontab -l```
+
+Check whether the file is created by the cron job
+
+```ll /tmp/```
+
+#### Reference - https://www.nbtechsupport.co.in/2020/12/a-cron-job-linux-server-kodekloud.html
 
 ##
 
