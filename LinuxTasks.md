@@ -237,7 +237,9 @@ Check whether the file is created by the cron job
 
 ```ll /tmp/```
 
-#### Reference - https://www.nbtechsupport.co.in/2020/12/a-cron-job-linux-server-kodekloud.html
+#### Reference 1 - https://www.nbtechsupport.co.in/2020/12/a-cron-job-linux-server-kodekloud.html
+
+#### Reference 2 https://www.freecodecamp.org/news/cron-jobs-in-linux/
 
 ##
 
