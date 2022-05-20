@@ -241,6 +241,11 @@ Check whether the file is created by the cron job
 
 #### Reference 2 https://www.freecodecamp.org/news/cron-jobs-in-linux/
 
+## 2022/05/20 - Find all the files with extension css under /var/www/html/official and move to /official under root
+
+```find /var/www/html/official -type f -name '*.css'  -exec cp --parents {} /official \;```
+
+
 ##
 
 KodeKloud - https://www.shawonruet.com/search/label/operating_system?max-results=20
