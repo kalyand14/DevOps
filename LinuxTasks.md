@@ -1,3 +1,12 @@
+
+KodeKloud Task: https://www.kodekloud-engineer.com/#!/tasks
+
+System List: https://kodekloudhub.github.io/kodekloud-engineer/docs/projects/nautilus
+
+Architecture: https://lucid.app/lucidchart/58e22de2-c446-4b49-ae0f-db79a3318e97/view?page=0_0#
+
+
+
 # Linux daily task
 
 ## 2022/04/08 - Create a Linux User with non-interactive shell
