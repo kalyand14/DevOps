@@ -2,6 +2,10 @@
 
 ## Deploy Jenkins and configure it
 
+### How to change jenkins home directory
+
+https://phoenixnap.com/kb/change-jenkins-home-directory
+
 ### Deploy Jenkins
 
 - [X] Deploy jenkins in EC2 using CloudFromation
