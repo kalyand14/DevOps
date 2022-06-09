@@ -1,5 +1,7 @@
 # DevOps - Playground for DevOps Task
 
+Guide - https://www.bogotobogo.com/DevOps/Docker/Docker-Jenkins-Master-Slave-Agent-ssh.php
+
 ## Deploy Jenkins and configure it
 
 ### How to change jenkins home directory
