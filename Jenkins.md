@@ -44,4 +44,9 @@ Solution: https://scriptcrunch.com/solved-vboxmanage-error-component-machinewrap
  5. Host - Give the <b>Private IP address</b> of the agent machine
  6. Credentials - create username with private SSH key - use the private key downloaed for slave machine
  7. Host key verification Stratergy - Manully trusted key verification stratergy
+
+#### Jenkis controller  - configure docker dynamic agent
+
+1. Install <b>docker pipeline</b> plugin
+
     
