@@ -9,7 +9,7 @@ Solution: https://scriptcrunch.com/solved-vboxmanage-error-component-machinewrap
 ### 11 Jun 2022 - 
 
 1. Create Jenkins Master(EC2) - Slave(EC2) configuration
-2. No jobs should be execture in Master. No. of Executers should be '0'
+2. No jobs should be executed in Master. Set No. of Executers in master as '0'
 3. Run pipeline jobs using Dynamic docker agent in the slave - Git: https://github.com/darinpope/jenkins-example-docker.git
 
 #### Jenkins Master  - Steps involved in it
