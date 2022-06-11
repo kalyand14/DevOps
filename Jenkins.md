@@ -6,6 +6,8 @@ While setting up the VmWare and Vagrant box in MAc, i got below error
 
 Solution: https://scriptcrunch.com/solved-vboxmanage-error-component-machinewrap/
 
+# Dialy Jenkins Task
+
 ### 11 Jun 2022 - 
 
 1. Create Jenkins Master(EC2) - Slave(EC2) configuration
