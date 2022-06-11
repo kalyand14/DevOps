@@ -56,4 +56,8 @@ Solution: https://scriptcrunch.com/solved-vboxmanage-error-component-machinewrap
 
 ### 11 Jun 2022 - 
 
-1. Create Authorization Statergey for Jenkins
+1. Create Authorization Strategy for Jenkins
+
+### 12 Jun 2022 - 
+
+1. Create Backup Strategy for Jenkins
