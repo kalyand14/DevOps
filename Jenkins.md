@@ -8,7 +8,7 @@ Solution: https://scriptcrunch.com/solved-vboxmanage-error-component-machinewrap
 
 # Daily Jenkins Task
 
-### 11 Jun 2022 - 
+### 10 Jun 2022 - 
 
 1. Create Jenkins Master(EC2) - Slave(EC2) configuration
 2. No jobs should be executed in Master. Set No. of Executers in master as '0'
@@ -49,4 +49,11 @@ Solution: https://scriptcrunch.com/solved-vboxmanage-error-component-machinewrap
 
 1. Install <b>docker pipeline</b> plugin
 
-    
+### 11 Jun 2022 - 
+
+1. Create Jenkins Master(EC2) - Sclable Slave(EC2) configuration
+
+
+### 11 Jun 2022 - 
+
+1. Create Authorization Statergey for Jenkins
