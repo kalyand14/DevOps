@@ -53,6 +53,46 @@ Solution: https://scriptcrunch.com/solved-vboxmanage-error-component-machinewrap
 
 1. Create Jenkins Master(EC2) - Sclable Slave(EC2) configuration
 
+#### AWS
+
+1. Create policy and role to allow the EC2 instance ( wherer jenkins master is running) to create other EC2 instance
+
+Refer - https://plugins.jenkins.io/ec2/#plugin-content-iam-setup
+
+2. Add the newly created role to the EC2 master instance
+
+#### Jenkins Master
+
+1. Install the <b>AWS EC2 plugin</b> and configure it as below.
+
+Instance configuration
+
+a. Name the instance
+b. Select the region
+c. Configure the EC2 SSH private key as Credentials
+
+AMIs configuration
+
+a. Give description
+b. AMI ID - use valid AMI ID from AWS
+c. Instance Type - T2Micro
+d. Security Group - allow the connection only form master EC2 instance
+e. Remote user:  ec2-user
+f. AMI Type: unix
+g.Labels: jenkins-ec2-plugin-slave
+
+Advance Configuration
+
+a. Number of Executors - 5
+b. Subset ID for VPC
+c.  Host key Verification Starategy - accept - new
+
+
+#### Jenkins Slave
+
+Will automatically created and shutdown after 5 mins ideal time
+
+if you want preinstalled software then create new AMI with backed image
 
 ### 11 Jun 2022 - 
 
