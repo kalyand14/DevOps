@@ -32,5 +32,6 @@ spec:
   ports:
     - port: 8080
       targetPort: 8080
+      nodePort: 30008
   selector:
     app: kubeserve
