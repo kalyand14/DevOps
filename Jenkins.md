@@ -2,6 +2,8 @@
 
 While setting up the VmWare and Vagrant box in MAc, i got below error 
 
+Jenkins - Kubernetes deployment : https://www.youtube.com/watch?v=wIwEqr1AQ84&list=PLnKRMdDSbUHCN1lrfgVYsrZu1vhs4FZSk&index=7
+
 ### VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component MachineWrap, interface IMachine
 
 Solution: https://scriptcrunch.com/solved-vboxmanage-error-component-machinewrap/
