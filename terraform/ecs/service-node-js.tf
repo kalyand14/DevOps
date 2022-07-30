@@ -2,7 +2,7 @@ data "template_file" "env_vars" {
   template = file("env_vars.json")
 }
 
-resource "aws_ecs_task_definition" "aws-ecs-task" {
+resource "aws_ecs_task_definition" "aws-ecs-node-js-task" {
   family = "${var.app_name}-task"
 
   container_definitions = <<DEFINITION
@@ -13,8 +13,8 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
       "entryPoint": [],
       "environment":  [
         {
-          "name": "NODE_ENV",
-          "value": "production"
+          "name": "app",
+          "value": "node-js"
         }
       ],
       "essential": true,
@@ -52,15 +52,15 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
   }
 }
 
-data "aws_ecs_task_definition" "main" {
-  task_definition = aws_ecs_task_definition.aws-ecs-task.family
+data "aws_ecs_task_definition" "node-js-main" {
+  task_definition = aws_ecs_task_definition.aws-ecs-node-js-task.family
 }
 
-resource "aws_ecs_service" "aws-ecs-service" {
-  name                 = "${var.app_name}-${var.app_environment}-ecs-service"
+resource "aws_ecs_service" "aws-ecs-node-js-service" {
+  name                 = "${var.app_name}-${var.app_environment}-ecs-node-js-service"
   cluster              = aws_ecs_cluster.aws-ecs-cluster.id
   #task_definition      = "${aws_ecs_task_definition.aws-ecs-task.family}:${max(aws_ecs_task_definition.aws-ecs-task.revision, data.aws_ecs_task_definition.main.revision)}"
-  task_definition = aws_ecs_task_definition.aws-ecs-task.arn
+  task_definition = aws_ecs_task_definition.aws-ecs-node-js-task.arn
   launch_type          = "FARGATE"
   scheduling_strategy  = "REPLICA"
   desired_count        = 1
